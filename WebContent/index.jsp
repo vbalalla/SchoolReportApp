@@ -9,6 +9,6 @@
 <body>
 <button onclick="location.href='first.jsp'">input results</button>
 <button onclick="location.href='Backup.jsp'">backup</button>
-<button onclick="location.href='Report.jsp'">reports</button>
+<button onclick="location.href='ReportSelect.jsp'">reports</button>
 </body>
 </html>

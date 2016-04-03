@@ -7,12 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<form>
-<select>
-	
-</select>
-</form>
-
+	<form action="ReportData" method="get">
+		<input type="text" name="name">
+		<input type="submit">
+	</form>
 </body>
 </html>

@@ -9,13 +9,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+<header><h3>${name} 's Report</h3></header>
+
+
 <canvas id="mycanvas" width="400" height="400"></canvas>
 <script>
 	$(document).ready(function(){
 		var ctx = $("#mycanvas").get(0).getContext("2d");
+		var da = '${data}';
+		var arr = da.split(",");
+		var str = [];
+		for(i=0;i<arr.length;i++){
+			str.push(parseInt(arr[i]));
+		}
 		
 		var data = {
-			    labels: ["January", "February", "March", "April", "May", "June", "July"],
+			    labels: ["subject 1", "subject 2", "subject 3", "subject 4", "subject 5", "subject 6", "subject 7", "subject 8", "subject 9", "subject 10"],
 			    datasets: [
 			        {
 			            label: "My First dataset",
@@ -23,7 +32,7 @@
 			            strokeColor: "rgba(220,220,220,0.8)",
 			            highlightFill: "rgba(220,220,220,0.75)",
 			            highlightStroke: "rgba(220,220,220,1)",
-			            data: [65, 59, 80, 81, 56, 55, 40]
+			            data: str
 			        }
 			    ]
 			};
