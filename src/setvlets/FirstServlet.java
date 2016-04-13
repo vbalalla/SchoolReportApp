@@ -34,13 +34,20 @@ public class FirstServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String url = request.getParameter("url");
+		String year = request.getParameter("year");
+		String sem = request.getParameter("sem");
+		
 		ReadCVS obj = new ReadCVS();
 		ArrayList<String> alldata = obj.run(url);
 		System.out.println(alldata.get(0));
-		
 		InputData in = new InputData();
+		
+		String[] data = alldata.get(0).split(",");
+		
 		try {
-			in.addCVS(alldata);
+			String dbname = in.create_db(year, sem, data);
+			in.addCVS(alldata, dbname);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
