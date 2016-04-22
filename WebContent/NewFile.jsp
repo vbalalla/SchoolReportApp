@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<button onclick="location.href='first.jsp'">input results</button>
-<button onclick="location.href='Backup.jsp'">backup</button>
-<button onclick="location.href='ReportSelect.jsp'">reports</button>
-<button onclick="location.href='semisterReport'">Semester wise results</button>
+
+
 </body>
 </html>
